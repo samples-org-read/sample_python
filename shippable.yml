@@ -13,7 +13,6 @@ install:
 
 # Make folders for the reports
 before_script:
-  - invalidcommandthatshouldfail
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
