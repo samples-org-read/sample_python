@@ -31,7 +31,7 @@ build_image:
 
 branches:
   only:
-    - master
+    - prod
     
 notifications:
   email:
