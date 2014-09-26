@@ -29,6 +29,10 @@ build_image:
   privileged: true
   run_command: 'echo hello cruel world'
 
+branches:
+  only:
+    - master
+    
 notifications:
   email:
    - devashish+notify1@shippable.com
