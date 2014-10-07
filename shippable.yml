@@ -28,9 +28,6 @@ build_image: shippable/minv2
 #  privileged: true
 #  run_command: 'echo hello cruel world'
 
-branches:
-  only:
-    - prod
     
 notifications:
   email:
