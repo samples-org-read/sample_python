@@ -10,7 +10,12 @@ python:
   
 after_success:
   - env
-  - sudo apt-get -y install ansible
+  - sudo apt-get install software-properties-common
+  - sudo add-apt-repository ppa:ansible/ansible -y
+  - sudo apt-get update
+  - sudo apt-get -y install ansible -y 
+  - sudo apt-get install python-boto -y
+  - sudo ansible --version
   - ansible-playbook --version
   
 install:
