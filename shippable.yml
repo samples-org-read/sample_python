@@ -8,7 +8,7 @@ python:
 #  - 3.4
 #  - pypy
   
-before_install:
+after_success:
   - env
   - sudo apt-get -y install ansible
   - ansible-playbook --version
