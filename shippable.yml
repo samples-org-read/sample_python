@@ -25,6 +25,7 @@ install:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - date +"%s"
   - git log --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
 #  - git log --pretty='%s (%h: %an)' --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
   
