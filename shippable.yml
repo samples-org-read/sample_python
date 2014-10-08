@@ -25,7 +25,7 @@ install:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - git log --pretty="%s (%h: %an)" --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
+#  - git log --pretty="%s (%h: %an)" --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
   
 script:
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
