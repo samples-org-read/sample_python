@@ -1,6 +1,6 @@
 language: python
 
-blahblahblahblab
+
 python:
   - 2.6
 #  - 2.7
@@ -8,16 +8,6 @@ python:
 #  - 3.3
 #  - 3.4
 #  - pypy
-  
-#after_success:
-#  - env
-#  - sudo apt-get install software-properties-common
-#  - sudo add-apt-repository ppa:ansible/ansible -y
-#  - sudo apt-get update
-#  - sudo apt-get -y install ansible -y 
-#  - sudo apt-get install python-boto -y
-#  - sudo ansible --version
-#  - ansible-playbook --version
   
 install:
   - pip install -r requirements.txt
@@ -35,11 +25,21 @@ before_script:
 #  - git log --pretty='%s (%h: %an)' --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
   
 script:
+  - blahblahblahblab
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - which python && coverage run --branch test.py
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
-build_image: shippable/minv2
+after_script:
+  - echo "this should always run"
+  
+after_failure:
+  - echo "script failed....."
+  
+after_success:
+  - echo "script OK...."
+  
+#build_image: shippable/minv2
 #build_image:
 #  name: shippable/minv2
 #  net: host
