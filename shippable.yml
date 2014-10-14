@@ -29,6 +29,7 @@ script:
   - which python && coverage run --branch test.py
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
   - echo "script ran just fine"
+  - env
 
 after_script:
   - echo "this should always run"
