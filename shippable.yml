@@ -21,7 +21,7 @@ python:
 install:
   - pip install -r requirements.txt
 env:
-  - secure: INZ1b796G+FQxdmOD6gcxJ2POcD+L15ItCCR9dl00i46CwPjvp37coohvRw2QYDB5LfjSRffR9wXAvWlkvQ8sYFFkgkt3JxOTtjz2uEvw0bdXJvTxLfSwT1RaL2cExSVDwpVvl0KeAvsy/yIPqHDyuFFDpDGWNUuc4+AhzfB4UOkql85JnadXHnoJzhOppkYb16CuHw15KtZLOlJFlJS7NiPGbZLiPLveI4zs0aBQHJrLy+QJXEI9HSb9McuujSzFU6IW1XAKO7RHW7sAEL0xYfU/uIhS30RrW84sd+n68fNCe5OpsVHlhNRli3R+4666YLrJzWdScN99B1IOKAv8A==
+  - secure: PDPuZL+RKyyOVIk8FECQPuYUvEdWou9jixRI9UOpfnECuecTFscuLkPka6sDf/9LuhzIJKUEDD0YI53OKJboOWnaWsVpnaz68ZrUQIj8xaMYI1rB4MgT6X9b68kVtJb+pvjhXb5UtmRvLpIoULA0nvBRFCMN8R4LKkosvSk3h76OInUTaiC/y1gUKXpA0XZtqcA63Sq60juDXqq45TBaFoTfe4u2g1plIKAkAbq5O/K0MEi8q2lN4ldhiLIdYpCw2mfNWYj6oxtm96s5mETFNSpQo21y1icQu7WXKsze5OTqR16G1bpfk1k1HCRE3KvIsVI/GCu5nezuS91awb72VQ==
   
 # Make folders for the reports
 before_script:
@@ -29,8 +29,9 @@ before_script:
   - mkdir -p shippable/codecoverage
   - date +"%s"
   - git log --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
-  - echo $Foo
-  - echo $Bar
+  - echo $foo
+  - echo $bar
+  - echo $baz
 #  - git log --pretty='%s (%h: %an)' --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
   
 script:
