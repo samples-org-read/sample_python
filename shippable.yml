@@ -9,11 +9,8 @@ python:
 #  - pypy
   
 env:
-  global:
-    - FOO="__Foo__"  BAR="bar" BAZ="____baz"
-  matrix:
-    - BLEH="BLEH1"
-    - MEH="MEH1"
+  - FOO="__Foo__"  BAR="bar" BAZ="____baz" BLEH="BLEH1"
+    
 #after_success:
 #  - env
 #  - sudo apt-get install software-properties-common
