@@ -10,6 +10,7 @@ python:
   
 env:
   - FOO="__Foo__"  BAR="bar" BAZ="____baz" BLEH="BLEH1"
+  - VAR1=somevalue
     
 #after_success:
 #  - env
