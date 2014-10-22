@@ -23,7 +23,7 @@ matrix:
     - env: VAR3=Blue
   include:
     - python: 3.3
-    - env: INCLUDE_VAR=somevalue
+      env: INCLUDE_VAR=somevalue
 #after_success:
 #  - env
 #  - sudo apt-get install software-properties-common
