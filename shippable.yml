@@ -11,6 +11,7 @@ python:
 env:
   global:
     - GLOBAL_VAR=global GLOBAL_VAR2=asdf
+    - SECOND_GLOBAL_VAR=test EEEEE=23232
   matrix:
     - FOO="__Foo__"  BAR="bar" BAZ="____baz" BLEH="BLEH1"
     - VAR1=somevalue
