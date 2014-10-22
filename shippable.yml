@@ -9,8 +9,11 @@ python:
 #  - pypy
   
 env:
-  - FOO="__Foo__"  BAR="bar" BAZ="____baz" BLEH="BLEH1"
-  - VAR1=somevalue
+  global:
+    - GLOBAL_VAR=global GLOBAL_VAR2=asdf
+  matrix:
+    - FOO="__Foo__"  BAR="bar" BAZ="____baz" BLEH="BLEH1"
+    - VAR1=somevalue
     
 #after_success:
 #  - env
