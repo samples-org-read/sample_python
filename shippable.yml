@@ -65,6 +65,3 @@ script:
 #  run_command: 'echo hello cruel world'
 
     
-notifications:
-  email:
-   - devashish+notify1@shippable.com
