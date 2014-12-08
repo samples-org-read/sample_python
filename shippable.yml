@@ -17,6 +17,8 @@ env:
     - VAR1=somevalue
     - VAR2=bleh
     - VAR3=Blue
+    - secure: OYxJxuGSIXYV6dhe14uhOF5b+CfWxSG+ld0qwlxP+UlPMX+Ui5kiAPhZvVfINvzoTyvzbbmRUIHY57IbPE7hX6pYgcLLvYjMr3BnALHdGPFhxYbG9MJBgaFgZc91HpgrJVV5fk9CNMAgcaW6GGCz4T+EJNJBown9XkPsfVledZ58SONn26+baBtC/IFJA8THapRMkXRx9WRLV691wbolyeclmXgbT4r27vaHl9QcFMmgQgeoY0ySFIZhVl8Ju0NzmaTmq+A/2D7LiAcTlM+OKzVNcAhQqvjHLBf2rDNNFXezBLL0ov4vUChQVJFzDjfyYuDv0IKFyJjGkgiT2feh/g==
+
     
 matrix:
   exclude:
@@ -46,6 +48,7 @@ before_script:
   - date +"%s"
   - git log --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
   - echo $Foo
+  - echo $key1 and $key2
   - echo $Bar
 #  - git log --pretty='%s (%h: %an)' --since=$LAST_SUCCESSFUL_BUILD_TIMESTAMP
   
